@@ -2,31 +2,22 @@
   <img src="./docs/images/server-icon.png" alt="ScrapeFun Server" width="80" />
   <h1>ScrapeFun Server for Windows</h1>
   <p><a href="./README.md">简体中文</a> · <strong>English</strong></p>
-  <p><a href="https://scrapefun.com/?lang=en">Website</a> · <a href="https://github.com/HaoweiLi97/scrapefun-server-windows/releases/latest">Download</a> · <a href="https://github.com/HaoweiLi97/scrapefun-server-windows/releases">All releases</a> · <a href="https://scrapefun.com/?lang=en#/docs">Documentation</a></p>
+  <p><a href="https://scrapefun.com/?lang=en">Website</a> · <a href="https://apps.microsoft.com/detail/9N83B6RSWG01">Microsoft Store</a> · <a href="https://scrapefun.com/?lang=en#/docs">Documentation</a></p>
 </div>
 
 > Updated: 2026-11-03. Versions and assets below are the stable releases checked on this date. Follow the corresponding Release for later changes.
 
 A Windows system-tray host with the ScrapeFun Server runtime and a management interface in your default browser. Manage movie, TV, comic, and remote WebDAV / AList libraries, and let Clients on your LAN connect.
 
-GitHub downloads are EXE installers. Microsoft Store distributes MSIX packages; check the Store listing for its available version. Keep your existing installation channel and back up data before migration.
+## Install from Microsoft Store
 
-## Downloads and environment
+The x64 Windows edition is distributed through Microsoft Store. Check the product page for available versions and system requirements.
 
-| Item | Current stable release |
-| --- | --- |
-| Version | [0.5.9](https://github.com/HaoweiLi97/scrapefun-server-windows/releases/tag/v0.5.9) |
-| Architecture | x64 |
-| First installation | `ScrapeFun-windows-amd64-v0.5.9-setup.exe` |
-| Update assets | `releases.stable.json`, `ScrapeFunServer-0.5.9-stable-full.nupkg` |
-
-Download setup from the [stable download page](https://github.com/HaoweiLi97/scrapefun-server-windows/releases/latest). Do not use nupkg for a first installation. System requirements and publisher signing status follow the actual installer and release information.
-
-GitHub EXE installers are unsigned; Windows may trigger Microsoft Defender SmartScreen or show an unknown-publisher warning. Verify downloads against the release SHA256SUMS. Microsoft Store remains available as a separate [installation channel](https://apps.microsoft.com/detail/9N83B6RSWG01); back up data before switching channels.
+[Microsoft Store](https://apps.microsoft.com/detail/9N83B6RSWG01)
 
 ## Installation and first launch
 
-1. Run setup, complete installation, and launch Server.
+1. Install from Microsoft Store and open ScrapeFun Server.
 2. Open the ScrapeFun web interface from the system tray. The default address is `http://127.0.0.1:8096`.
 3. For a new instance, follow the web setup to configure administrator credentials, storage, and libraries.
 4. Enable LAN access and check the firewall when other devices need to connect.
@@ -45,22 +36,13 @@ Runtime data defaults to:
 
 Business data is in `data` and logs are in `logs`. These files live outside the installation directory; installer updates normally retain them. Deleting the user data directory affects the entire instance. Back up before doing so.
 
-## Updates and migration from older installations
+## Updates
 
-Velopack currently manages stable / beta updates. Check for updates in the web settings or tray, or run newer setup. Updates restart the service, so pause tasks and export a backup first.
-
-For an older Inno Setup installation, exit and uninstall the old host, then run Velopack setup once. Retain `%APPDATA%\ScrapeFunDesktop` and check login, libraries, and data after migration. You can then use in-app updates.
-
-<details>
-<summary>Troubleshooting</summary>
-
-If the service cannot be opened, check processes, port conflicts, the log directory accessible from the tray, and the firewall. Reports should include Windows version, Server version, installation method, and logs with sensitive details removed.
-
-</details>
+Microsoft Store handles updates. Before switching from an older EXE installation, export a full backup from Server settings, exit and uninstall the old application, install the Store version, and restore the backup. Keep your original media files available.
 
 ## Support and licensing
 
-This repository provides platform installation instructions and official release assets. Submit usage questions and feature requests to the [main repository Issues](https://github.com/HaoweiLi97/ScrapeFun/issues). For accounts, activation, or private logs, contact `scrapefun@outlook.com`. Report security issues privately according to the [security instructions](./SECURITY.en.md).
+This repository provides installation instructions and an archive of previous releases. Submit usage questions and feature requests to the [main repository Issues](https://github.com/HaoweiLi97/ScrapeFun/issues). For accounts, activation, or private logs, contact `scrapefun@outlook.com`. Report security issues privately according to the [security instructions](./SECURITY.en.md).
 
 See the new [commercial license statement](./LICENSE.en.txt) and full [software license agreement](./EULA.en.md). Ordinary personal, household, and internal organizational use is allowed. Pro requires a valid entitlement. Software redistribution, resale, customer delivery, and paid hosting require separate written authorization. The statement does not retroactively change existing licenses; existing assets follow their supplied licenses, and third-party components retain their own licenses.
 
